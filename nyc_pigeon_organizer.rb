@@ -10,6 +10,7 @@ def nyc_pigeon_organizer(data)
   allPigeonNames.each {|pigeonName|
     data.each {|attribute, statuses|
       statuses.each {|status, pigeon|
+        binding.pry
         if pigeonName == pigeon
           if newData[pigeonName] == false
             newData[pigeonName] = {}
@@ -23,6 +24,5 @@ def nyc_pigeon_organizer(data)
       }
     }
   }
-  binding.pry
   # write your code here!
 end
