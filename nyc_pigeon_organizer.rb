@@ -26,5 +26,6 @@ def nyc_pigeon_organizer(data)
       }
     }
   }
+  newData
   # write your code here!
 end
