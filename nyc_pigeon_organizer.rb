@@ -13,7 +13,6 @@ def nyc_pigeon_organizer(data)
             newData[pigeonName][attribute].push(status.to_s)
           else
             newData[pigeonName][attribute] = [status.to_s]
-
           end
         end
       }
