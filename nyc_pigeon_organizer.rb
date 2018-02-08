@@ -22,10 +22,8 @@ def nyc_pigeon_organizer(data)
             end
           end
         }
-        # binding.pry
       }
     }
   }
   newData
-  # write your code here!
 end
