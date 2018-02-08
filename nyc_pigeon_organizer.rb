@@ -1,7 +1,11 @@
 def nyc_pigeon_organizer(data)
   allPigeonNames = []
   newData = {}
-  data[:gender].each {|gender, pigeons| pigeons.each {|pigeon| allPigeonNames.push(pigeon)}}
+  data[:gender].each {|gender, pigeons| 
+    pigeons.each {|pigeon| 
+      allPigeonNames.push(pigeon)
+    }
+  }
   allPigeonNames.each {|pigeonName|
     data.each {|attribute, statuses|
       statuses.each {|status, pigeon|
