@@ -6,12 +6,13 @@ def nyc_pigeon_organizer(data)
     data.each {|attribute, statuses|
       statuses.each {|status, pigeon|
         if pigeonName == pigeon
-          if newData[pigeonName][attribute].push(status.to_s)
+          if newData[pigeonName][attribute]
+            newData[pigeonName][attribute].push(status.to_s)
           else
             newData[pigeonName][attribute] = [status.to_s]
-            
+
           end
-          newData[pigeonName][attribute] 
+          newData[pigeonName][attribute]
         end
       }
     }
