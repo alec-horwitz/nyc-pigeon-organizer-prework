@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
     }
   }
   allPigeonNames.each {|pigeonName|
-    if newData[pigeonName]
+    if !(newData[pigeonName])
       newData[pigeonName] = {}
     end
     data.each {|attribute, statuses|
