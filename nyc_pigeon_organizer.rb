@@ -9,18 +9,20 @@ def nyc_pigeon_organizer(data)
   }
   allPigeonNames.each {|pigeonName|
     data.each {|attribute, statuses|
-      statuses.each {|status, pigeon|
-        binding.pry
-        if pigeonName == pigeon
-          if newData[pigeonName] == false
-            newData[pigeonName] = {}
+      statuses.each {|status, pigeons|
+        pigeons.each {|pigeon|
+          binding.pry
+          if pigeonName == pigeon
+            if newData[pigeonName] == false
+              newData[pigeonName] = {}
+            end
+            if newData[pigeonName][attribute]
+              newData[pigeonName][attribute].push(status.to_s)
+            else
+              newData[pigeonName][attribute] = [status.to_s]
+            end
           end
-          if newData[pigeonName][attribute]
-            newData[pigeonName][attribute].push(status.to_s)
-          else
-            newData[pigeonName][attribute] = [status.to_s]
-          end
-        end
+        }
       }
     }
   }
