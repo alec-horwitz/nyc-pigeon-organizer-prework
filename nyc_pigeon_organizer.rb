@@ -20,9 +20,9 @@ def nyc_pigeon_organizer(data)
             newData[pigeonName][attribute] = [status.to_s]
           end
         end
-        binding.pry
       }
     }
   }
+  binding.pry
   # write your code here!
 end
