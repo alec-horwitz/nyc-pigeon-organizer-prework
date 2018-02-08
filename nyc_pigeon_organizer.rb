@@ -1,8 +1,9 @@
+require "pry"
 def nyc_pigeon_organizer(data)
   allPigeonNames = []
   newData = {}
-  data[:gender].each {|gender, pigeons| 
-    pigeons.each {|pigeon| 
+  data[:gender].each {|gender, pigeons|
+    pigeons.each {|pigeon|
       allPigeonNames.push(pigeon)
     }
   }
@@ -19,6 +20,7 @@ def nyc_pigeon_organizer(data)
             newData[pigeonName][attribute] = [status.to_s]
           end
         end
+        binding.pry
       }
     }
   }
